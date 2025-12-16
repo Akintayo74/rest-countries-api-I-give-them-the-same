@@ -1,0 +1,47 @@
+.
+├── ./bun.lock
+├── ./data.json
+├── ./design
+│   ├── ./design/desktop-design-detail-dark.jpg
+│   ├── ./design/desktop-design-detail-light.jpg
+│   ├── ./design/desktop-design-home-dark.jpg
+│   ├── ./design/desktop-design-home-light.jpg
+│   ├── ./design/mobile-design-detail-dark.jpg
+│   ├── ./design/mobile-design-detail-light.jpg
+│   ├── ./design/mobile-design-home-dark.jpg
+│   └── ./design/mobile-design-home-light.jpg
+├── ./eslint.config.mjs
+├── ./.gitignore
+├── ./next.config.ts
+├── ./next-env.d.ts
+├── ./package.json
+├── ./postcss.config.js
+├── ./preview.jpg
+├── ./public
+│   ├── ./public/file.svg
+│   ├── ./public/globe.svg
+│   ├── ./public/next.svg
+│   ├── ./public/vercel.svg
+│   └── ./public/window.svg
+├── ./README.md
+├── ./README-template.md
+├── ./src
+│   ├── ./src/app
+│   │   ├── ./src/app/favicon.ico
+│   │   ├── ./src/app/globals.css
+│   │   ├── ./src/app/layout.tsx
+│   │   ├── ./src/app/page.module.css
+│   │   └── ./src/app/page.tsx
+│   ├── ./src/components
+│   │   └── ./src/components/Header
+│   │       ├── ./src/components/Header/Header.module.css
+│   │       ├── ./src/components/Header/Header.tsx
+│   │       └── ./src/components/Header/index.ts
+│   ├── ./src/constants.js
+│   └── ./src/styles
+│       └── ./src/styles/media.css
+├── ./structure.txt
+├── ./style-guide.md
+└── ./tsconfig.json
+
+8 directories, 37 files

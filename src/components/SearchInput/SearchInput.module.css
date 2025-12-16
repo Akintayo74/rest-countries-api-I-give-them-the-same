@@ -1,0 +1,29 @@
+@import '../../styles/media.css';
+
+.container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    position: relative;
+    border: 2px solid black;
+    padding: 20px 10px 20px 10px;
+    border-radius: 8px;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+.input {
+    /* width: 100%; */
+    border: none;
+    height: 100%;
+    padding: 0 20px 0 40px;
+    outline: none;
+    font-size: 16px;
+}
