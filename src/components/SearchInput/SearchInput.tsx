@@ -7,7 +7,11 @@ function SearchInput() {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <Search className={styles.icon} />
-        <input className={styles.input} placeholder="Search for a country..." />
+        <input
+          className={styles.input}
+          placeholder="Search for a country..."
+          type="text"
+        />
       </div>
     </div>
   );
