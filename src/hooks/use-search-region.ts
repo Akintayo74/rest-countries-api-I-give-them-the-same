@@ -1,6 +1,7 @@
 'use client';
 import * as React from "react";
 import useSWR from "swr";
+import type { Country } from "@/types/country";
 
 
 async function fetcher(ENDPOINT: string) {
@@ -12,7 +13,7 @@ async function fetcher(ENDPOINT: string) {
 
 function useSearchRegion(region: string) {
     const ENDPOINT = region ? `https://restcountries.com/v3.1/region/${region}` : null;
-    const { data, error, isLoading } = useSWR(ENDPOINT, fetcher);
+    const { data, error, isLoading } = useSWR<Country[]>(ENDPOINT, fetcher);
 
     return { data, error, isLoading };
 }

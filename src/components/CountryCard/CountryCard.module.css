@@ -1,8 +1,26 @@
 @import '../../styles/media.css';
 
 .container {
+    --spacing-500: 40px;
+
     display: flex;
     flex-direction: column;
+    background-color: var(--white);
+    width: min-content;
+    margin-bottom: var(--spacing-500);
+}
+
+.country img {
+    display: block;
+    width: 264px;
+    height: 190px;
+    aspect-ratio: initial;
+}
+
+.info {
+    background-color: red;
+    padding: 0 0 48px 24px;
+    border-radius: 0 0 5px 5px;
 }
 
 .info ul {

@@ -1,7 +1,13 @@
 import * as React from "react";
 import styles from "./CountryCard.module.css";
 
-function CountryCard({ country }) {
+import type { Country } from "@/types/country";
+
+interface CountryCardProps {
+  country: Country,
+}
+
+function CountryCard( {country}: CountryCardProps ) {
   return (
     <div className={styles.container}>
       <div className={styles.country}>

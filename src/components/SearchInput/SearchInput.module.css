@@ -1,9 +1,9 @@
 @import '../../styles/media.css';
 
 .container {
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .wrapper {
