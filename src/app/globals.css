@@ -20,7 +20,8 @@ body {
 }
 
 body {
-  color: var(--grey-50);
+  /* color: var(--grey-50); */
+  color: yellow;
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;

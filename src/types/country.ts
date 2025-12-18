@@ -8,4 +8,5 @@ export type Country = {
     capital: string,
     population: number,
     region: string,
+    cca3: string,
 }

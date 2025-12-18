@@ -1,5 +1,6 @@
 import * as React from "react";
 import styles from "./CountryCard.module.css";
+import Link from "next/link";
 
 import type { Country } from "@/types/country";
 
@@ -9,7 +10,7 @@ interface CountryCardProps {
 
 function CountryCard( {country}: CountryCardProps ) {
   return (
-    <div className={styles.container}>
+    <Link href={`country/${country.cca3}`} className={styles.container}>
       <div className={styles.country}>
         <img src={country.flags.png} alt={`The flag of ${country.name}`} />
       </div>
@@ -26,7 +27,7 @@ function CountryCard( {country}: CountryCardProps ) {
           <b>Capital</b>: {country.capital}
         </p>
       </div>
-    </div>
+    </Link>
   );
 }
 
