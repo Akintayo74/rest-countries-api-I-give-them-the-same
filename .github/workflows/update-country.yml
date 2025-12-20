@@ -9,6 +9,9 @@ on:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # ← Add this! Gives permission to push
     
     steps:
       - name: Checkout repository
