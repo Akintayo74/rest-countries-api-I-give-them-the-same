@@ -1,0 +1,33 @@
+            
+name: Update Countries Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Daily
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Fetch countries data
+        run: |
+          mkdir -p data
+          curl https://restcountries.com/v3.1/all?fields=name,capital,currencies -o data/countries.json
+      
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/countries.json
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update countries data"
+            git push
+          fi
