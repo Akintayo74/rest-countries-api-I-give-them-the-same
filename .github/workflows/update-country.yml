@@ -20,7 +20,7 @@ jobs:
       - name: Fetch countries data
         run: |
           mkdir -p data
-          curl https://restcountries.com/v3.1/all?fields=name,capital,currencies,cca3,region -o data/countries.json
+          curl https://restcountries.com/v3.1/all?fields=name,capital,currencies,cca3,region,flags,population -o data/countries.json
       
       - name: Commit changes
         run: |
