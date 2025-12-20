@@ -5,10 +5,13 @@ import styles from "./SelectRegion.module.css";
 import useSearchRegion from "@/hooks/use-search-region";
 import CountryCard from "../CountryCard";
 
+import countriesData from '@/../data/countries.json';
+
 function SelectRegion() {
   const [selectedOption, setSelectedOption] = React.useState("");
 
-  const { data, error, isLoading } = useSearchRegion(selectedOption)
+  // const { data, error, isLoading } = useSearchRegion(selectedOption)
+  const filteredCountries = selectedOption ? countriesData.filter(country => country.region.toLowerCase() === selectedOption.toLowerCase());
 
   return (
     <div className={styles.container}>
@@ -29,9 +32,7 @@ function SelectRegion() {
         </select>
       </form>
 
-      {isLoading && <p>Data is fetching....</p>}
-
-      {data && data.map((country, index: number) => (
+      {filteredCountries.map((country, index: number) => (
         <CountryCard key={index} country={country}/>
       ))}
     </div>
